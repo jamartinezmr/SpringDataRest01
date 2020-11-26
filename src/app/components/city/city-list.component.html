@@ -1,0 +1,51 @@
+
+  <div class="row">
+    <div class="col-md-10">
+      <div class="imput-group mb-4">
+        <input
+        type="text"
+        class="form-control"
+        placeholder="Maximo de ciudades a mostrar"
+        [(ngModel)]="size"/>
+          <div class ="input-group-append">
+            <button
+                class = "btn btn-outline-secondary"
+                type ="button"
+                (click)="cargaCiudades()">
+                Máximo de ciudades a mostrar
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">
+    <h4> Ciudades</h4>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Id</th>
+          <th>Ciudad</th>
+          <th clasa="text-center">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let city of cities">
+          <td>{{city.cityId}}</td>
+          <td>{{city.city}}</td>
+          <td>
+            <button type ="button" class = "btn btn-primary btn-sm" >Detalle</button>
+            &nbsp;
+            <button type ="button" class = "btn btn-warning btn-sm" (click)="editarCiudad(1)">Editar</button>
+            &nbsp;
+            <button type ="button" class = "btn btn-danger btn-sm">Borrar</button>
+          </td>
+        </tr>
+
+
+      </tbody>
+
+    </table>
+
+  </div>
+</div>

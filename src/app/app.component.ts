@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'sakila-angular';
+  private algo = 0;
+
+  constructor(){}
+
+
+  actualizarAlgo(): void{}
 }

@@ -1,0 +1,26 @@
+<div style="width: 500px; margin: auto;">
+  <div>
+    <div *ngIf="!submitted">
+      <form>
+      <div class="form-group">
+        <label for="city">Nombre de la ciudad:</label>
+        <input
+          type="text"
+          class="for-control"
+          id="city"
+          name="city"
+          required
+          [(ngModel)]="nombre"
+          />
+      </div>
+      <button (click)="guardar()" class="btn btn-success">Guardar</button>
+    </form>
+    </div>
+
+
+    <div *ngIf="submitted">
+      <h3>Se guardo la ciudad con exito</h3>
+      <button class="btn btn-info" (click)="nueva()">Nueva Ciudad</button>
+    </div>
+  </div>
+</div>
